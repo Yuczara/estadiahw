@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Apply</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="\assets\images\icons\favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="\assets\vendor\bootstrap\css\bootstrap.min.css"> 
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="\assets\fonts\font-awesome-4.7.0\css\font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="\assets\vendor\animate\animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="\assets\vendor\css-hamburgers\hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="\assets\vendor\select2\select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="\assets\css\util.css">
+	<link rel="stylesheet" type="text/css" href="\assets\css\main.css">
+<!--===============================================================================================-->
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/mostrarDatos">HUAWEI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/mostrarDatos">Postulation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/mostrarPerfil">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cerrar">LogOut</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+	<div class="limiter">
+		
+		<div class="container-login100">
+			<div class="login100-pic js-tilt" data-tilt style="margin-right: 15rem;">
+				<img src="/assets/images/huawei.png" style="width: 130%;">
+			</div>
+			<div class="login100">
+				<form action="/insertarCandidato" method="POST" class="col-md-12">
+					<span class="login100-form-title">
+						<h1>Become part of us!!</h1>
+					</span>
+					<div class="row">
+					  <div class="col-md-6 mb-4">
+						<div class="form-outline">
+						  <input required type="text" id="name" name="name" placeholder="Name" class="input100">
+						  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+						</div>
+					  </div>
+					  <div class="col-md-6 mb-4">
+						<div class="form-outline">
+						  <input required type="text" id="lastname" name="lastname" placeholder="Last Name" class="input100"/>
+						  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+						</div>
+					  </div>
+					</div>
+					<div class="wrap-input100 validate-input">
+					  <input required type="number" id="age" name="age" placeholder="Age" class="input100"/>
+					  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+						</span>
+					</div>
+			
+					<div class="wrap-input100 validate-input">
+					  <textarea cols="40" rows="10" required type="text" id="about" name="about" placeholder="About You" class="input100" maxlength="255"></textarea>
+					  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-info" aria-hidden="true"></i>
+						</span>
+					</div>
+			
+					<div class="wrap-input100 validate-input">
+					  <input required type="text" id="speciality" name="speciality" placeholder="Speciality" class="input100" />
+					  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+						</span>
+					</div>
+			
+					<div class="wrap-input100 validate-input">
+					  <input required type="text" id="english" name="english" placeholder="English Level" class="input100" />
+					  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-globe" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="wrap-input100 validate-input">
+					  <input required type="text" id="achievements" name="achievements" placeholder="Achievements" class="input100"/>
+					  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+						</span>
+					</div>
+				   
+					<div class="wrap-input100 validate-input">
+					  <input required type="tel" id="telephone" name="telephone" placeholder="Phone Number" class="input100" />
+					  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-phone" aria-hidden="true"></i>
+						</span>
+					</div>
+			
+					<div class="wrap-input100 validate-input">
+					  <input required type="text" id="address" name="address" placeholder="Address" class="input100"/>
+					  <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-address-card-o" aria-hidden="true"></i>
+						</span>
+					</div>
+			
+					<div class="text-center">
+					  <button type="submit" id="boton1" name="submit" class="btn btn-danger btn-block mb-4 px-5">
+						Save
+					  </button>
+					</div>
+				  </form>
+
+				<!--==============================================================================================================================================-->
+				<!--==============================================================================================================================================-->
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="\assets\vendor\jquery\jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="\assets\vendor\bootstrap\js\popper.js"></script>
+	<script src="\assets\vendor\bootstrap\js\bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="\assets\vendor\select2\select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="\assets\vendor\tilt\tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="\assets\js\main.js"></script>
+	<script src="\assets\js\users\alerts.js"></script>
+
+
+</body>
+</html>

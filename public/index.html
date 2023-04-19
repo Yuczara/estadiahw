@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to Huawei</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/product/" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/footers/">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/cards.css">
+
+  <style>
+     .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      border: solid rgba(0, 0, 0, 0.15);
+      border-width: 1px 0;
+      box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -0.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="./assets/css/product.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/carousel.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background-color: white">
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+      <title>Bootstrap</title>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+    </symbol>
+    <symbol id="facebook" viewBox="0 0 16 16">
+      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+    </symbol>
+    <symbol id="twitter" viewBox="0 0 16 16">
+      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header sticky-top py-1">
+    <nav class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="#" aria-label="Product">
+        <svg xmlns="https://www.freepnglogos.com/pics/huawei-logo-png" width="24" height="24" fill="none" stroke="currentColor"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
+          viewBox="0 0 24 24">
+          <title>Product</title>
+          <circle cx="12" cy="12" r="10" />
+          <path
+            d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+        </svg>
+      </a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
+      <a class="py-2 d-none d-md-inline-block" href="#about">About us</a>
+      <a class="py-2 d-none d-md-inline-block" href="#internship">Internship Program</a>
+      <a class="py-2 d-none d-md-inline-block" href="#gallery">Gallery</a>
+      <a class="py-2 d-none d-md-inline-block" href="./loginPage.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <!--Carrusel-->
+    <section id="carousel">
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="bd-placeholder-img" alt="description of your image" src="./assets/images/S3H.jpg"
+              style="max-width:100%; height:auto;" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+            </img>
+
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>Example headline.</h1>
+                <p>
+                  <b>
+                    Some representative placeholder content for the first slide of
+                    the carousel.
+                  </b>
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img" alt="description of your image" src="./assets/images/S1H.jpg"
+              style="max-width:100%; height:auto;" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+            </img>
+
+            <div class="container">
+              <div class="carousel-caption black-container">
+                <h1>Another example headline.</h1>
+                <p>
+                  Some representative placeholder content for the second slide
+                  of the carousel.
+                </p>
+                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="bd-placeholder-img" alt="description of your image" src="./assets/images/S4H.jpg"
+              style="max-width:100%; height:auto;" aria-hidden="true" preserveAspectRatio="xMidYMid slice"
+              focusable="false">
+            </img>
+
+            <div class="container black-container">
+              <div class="carousel-caption text-end">
+                <h1>One more for good measure.</h1>
+                <p>
+                  Some representative placeholder content for the third slide of
+                  this carousel.
+                </p>
+                <p>
+                  <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!--End Carrusel-->
+
+
+    <!--Cards-->
+    <section id="about" style="background-color: white">
+      <center>
+        <div class="container" style="margin-top: 4rem; margin-left: 1rem; margin-right: 1rem;">
+          <h1>How is Huawei?</h1><br>
+          <p>Founded in 1987, Huawei is a leading global provider of information and communications technology (ICT)
+            infrastructure and smart devices. We have approximately 195,000 employees and we operate in over 170
+            countries and regions, serving more than three billion people around the world.
+
+            Huawei's mission is to bring digital to every person, home and organization for a fully connected,
+            intelligent world. To this end, we will drive ubiquitous connectivity and promote equal access to networks
+            to lay the foundation for the intelligent world; provide diversified computing power to deliver ubiquitous
+            cloud and intelligence; build powerful digital platforms to help all industries and organizations become
+            more agile, efficient, and dynamic; redefine user experience with AI, offering consumers a more personalized
+            and intelligent experience across all scenarios, including home, travel, office, entertainment, and fitness
+            & health.</p>
+        </div>
+      </center>
+      <div class="centerHW">
+        <div class="cardHW">
+          <div class="cardHW-content">
+            <div class="cardHW-text">
+              <h1>
+                Mission
+              </h1>
+              <p>
+                Huawei is committed to connecting all people, homes and organizations that are still offline.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardHW">
+          <div class="cardHW-content">
+            <div class="cardHW-text">
+              <h1>
+                Vision
+              </h1>
+              <p>
+                Huawei’s vision is to bring digital to every person, home and organization for a fully connected,
+                intelligent world.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardHW">
+          <div class="cardHW-content">
+            <div class="cardHW-text">
+              <h1>
+                Values
+              </h1>
+              <p>
+                Stay customer centric,
+                Inspire dedication,
+                Perseverance,
+                Grow by reflection
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!--Cards-->
+
+    <section id="internship">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h2 class="display-4 fw-normal">Huawei Internship Program from Mexico TAC</h2><br>
+        <p class="lead fw-normal">
+          Welcome to our internship program! <br>
+          Become of part of us! <br><br>
+          Make it possible
+        </p>
+        <a class="btn btn-danger" href="loginPage.html">
+          <h3>Apply Now!</h3>
+        </a>
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+  </section>
+
+
+
+    <!--PL-->
+    <section class="mt-5 row" data-v-2c685624="">
+      <figure class="col-md-5" data-v-2c685624=""
+        style="align-items: center; display: flex; align-content: center; vertical-align: top; align-self: center;"><img
+          src="./assets/images/PLimg1.jpg" class="img-fluid" data-v-2c685624="" style="height: 30%;"></figure>
+
+      <article class="col-md-7" data-v-2c685624="">
+        <h4 class="title-gradient" data-v-2c685624="">Technical Assistance Center</h4>
+        <h3 data-v-2c685624="">What you will learn in this course?</h3>
+        <p data-v-2c685624="">Huawei provides six product lines to develop and grow in the one you prefer.</p>
+        <div class="accordion" id="accordionProductLines" data-v-2c685624="">
+          <div class="accordion-item p-2" data-v-2c685624="">
+            <h2 class="accordion-header d-flex" id="productLineOne" data-v-2c685624=""><img
+                src="/img/icon1.b074e222.svg" alt="" data-v-2c685624=""><button class="accordion-button collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseProductLineOne" aria-expanded="false"
+                aria-controls="collapseProductLineOne" data-v-2c685624=""> Wireless Network </button></h2>
+            <div id="collapseProductLineOne" class="accordion-collapse collapse" aria-labelledby="productLineOne"
+              data-bs-parent="#accordionProductLines" data-v-2c685624="">
+              <div class="accordion-body text-justify" data-v-2c685624=""><b data-v-2c685624="">5G</b><br
+                  data-v-2c685624=""> The development of global 5G in network, deployment, ecology and experience is
+                beyond imagination.<br data-v-2c685624=""><br data-v-2c685624=""><b data-v-2c685624="">LTE
+                  Network</b><br data-v-2c685624=""> Zero fallback refers to expansion of the fundamental LTE network
+                coverage so that it is the same as that of 2G and 3G networks.<br data-v-2c685624=""><br
+                  data-v-2c685624=""></div>
+            </div>
+          </div>
+          <div class="accordion-item p-2" data-v-2c685624="">
+            <h2 class="accordion-header d-flex" id="productLineTwo" data-v-2c685624=""><img
+                src="/img/icon2.ae7b633f.svg" alt="" data-v-2c685624=""><button class="accordion-button collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseProductLineTwo" aria-expanded="false"
+                aria-controls="collapseProductLineTwo" data-v-2c685624=""> Fixed Network </button></h2>
+            <div id="collapseProductLineTwo" class="accordion-collapse collapse" aria-labelledby="productLineTwo"
+              data-bs-parent="#accordionProductLines" data-v-2c685624="">
+              <div class="accordion-body text" data-v-2c685624=""><b data-v-2c685624="">Data Communication</b><br
+                  data-v-2c685624=""> Huawei’s NetEngine, CloudEngine, AirEngine, and HiSecEngine products are used to
+                build a leading data communication solutions.<br data-v-2c685624=""><br data-v-2c685624=""><b
+                  data-v-2c685624="">Transmission Network</b><br data-v-2c685624=""> Huawei is committed to providing
+                carrier and enterprise customers with high-performance transmission solutions featuring high
+                availability, large bandwidth, and intelligence.<br data-v-2c685624=""><br data-v-2c685624=""><b
+                  data-v-2c685624="">Access Network</b><br data-v-2c685624=""> In the access domain, Huawei provides
+                high-bandwidth, intelligent, and simplified all-optical access solutions. </div>
+            </div>
+          </div>
+          <div class="accordion-item p-2" data-v-2c685624="">
+            <h2 class="accordion-header d-flex" id="productLineThree" data-v-2c685624=""><img
+                src="/img/icon3.04c78962.svg" alt="" data-v-2c685624=""><button class="accordion-button collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseProductLineThree" aria-expanded="false"
+                aria-controls="collapseProductLineThree" data-v-2c685624=""> IT&amp;OSS
+              </button></h2>
+            <div id="collapseProductLineThree" class="accordion-collapse collapse" aria-labelledby="productLineThree"
+              data-bs-parent="#accordionProductLines" data-v-2c685624="">
+              <div class="accordion-body" data-v-2c685624=""> Huawei provides reliable, resilient, cost-effective,
+                full-stack cloud solutions, from public cloud, hybrid or private cloud, to edge cloud, meeting
+                carriers'
+                diverse needs. <br data-v-2c685624=""><br data-v-2c685624=""></div>
+            </div>
+          </div>
+          <div class="accordion-item p-2" data-v-2c685624="">
+            <h2 class="accordion-header d-flex" id="productLineFour" data-v-2c685624=""><img
+                src="/img/icon4.281707df.svg" alt="" data-v-2c685624=""><button class="accordion-button collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseProductLineFour" aria-expanded="false"
+                aria-controls="collapseProductLineFour" data-v-2c685624=""> Cloud Core Network
+              </button></h2>
+            <div id="collapseProductLineFour" class="accordion-collapse collapse" aria-labelledby="productLineFour"
+              data-bs-parent="#accordionProductLines" data-v-2c685624="">
+              <div class="accordion-body" data-v-2c685624=""> Core network is the pivot connecting industry networks,
+                communications networks, and the Internet. The Huawei Cloud Core Network product line provides a full
+                series of core network products and solutions, helping carriers build simplified, agile, convergent,
+                efficient, and reliable core networks, enable a wide range of industries, and achieve business
+                success.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item p-2" data-v-2c685624="">
+            <h2 class="accordion-header d-flex" id="productLineFive" data-v-2c685624=""><img
+                src="/img/icon5.0f8fb516.svg" alt="" data-v-2c685624=""><button class="accordion-button collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#collapseProductLineFive" aria-expanded="false"
+                aria-controls="collapseProductLineFive" data-v-2c685624=""> Application &amp;
+                Software </button></h2>
+            <div id="collapseProductLineFive" class="accordion-collapse collapse" aria-labelledby="productLineFive"
+              data-bs-parent="#accordionProductLines" data-v-2c685624="">
+              <div class="accordion-body" data-v-2c685624=""> Provides global carriers with industry-leading, secure,
+                and reliable end-to-end solutions, covering network planning, construction, O&amp;M, optimization, and
+                service operations. Over the past 30 years, Huawei has gradually become one of the world's largest and
+                most advanced service and software providers, with delivery capabilities and resources that are
+                distributed around the world. In the future, Huawei, as an always reliable strategic partner of
+                carriers, will continue to devote itself to helping carriers achieve digital transformation and
+                business
+                success. </div>
+            </div>
+          </div>
+          <div class="accordion-item p-2" data-v-2c685624="">
+            <h2 class="accordion-header d-flex" id="productLineSix" data-v-2c685624=""><img
+                src="/img/icon6.e48ae8b6.svg" alt="" data-v-2c685624=""><button class="accordion-button" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseProductLineSix" aria-expanded="true"
+                aria-controls="collapseProductLineSix" data-v-2c685624=""> Remote Delivery </button></h2>
+            <div id="collapseProductLineSix" class="accordion-collapse collapse show" aria-labelledby="productLineSix"
+              data-bs-parent="#accordionProductLines" data-v-2c685624="">
+              <div class="accordion-body" data-v-2c685624=""> Platform update and healt check of the same. </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+
+    <section id="gallery" class="text-center" style="margin-top: 10rem;">
+      <h1 style="margin-bottom: 5rem;">Our Experience</h1>
+      <!-- Carousel wrapper -->
+      <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+        <!-- Controls -->
+        <div class="d-flex justify-content-center mb-4">
+          <button class="carousel-control-prev position-relative" type="button"
+            data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next position-relative" type="button"
+            data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- Inner -->
+        <div class="carousel-inner py-4">
+          <!-- Single item -->
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/181.webp" class="card-img-top"
+                      alt="Waterfall" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp" class="card-img-top"
+                      alt="Sunset Over the Sea" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/183.webp" class="card-img-top"
+                      alt="Sunset over the Sea" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-12">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top"
+                      alt="Fissure in Sandstone" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/185.webp" class="card-img-top"
+                      alt="Storm Clouds" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/186.webp" class="card-img-top"
+                      alt="Hot Air Balloons" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div class="container" style="display: flex;">
+              <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp" class="card-img-top"
+                      alt="Peaks Against the Starry Sky" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp" class="card-img-top"
+                      alt="Bridge Over Water" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                  <div class="card">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp" class="card-img-top"
+                      alt="Purbeck Heritage Coast" />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Button</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Inner -->
+      </div>
+      <!-- Carousel wrapper -->
+    </section>
+
+
+
+  </main>
+
+  <div class="container" style="width: 90%;">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="https://www.freepnglogos.com/pics/huawei-logo-png"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-muted">©2023 Huawei Technologies Co., Ltd.</span>
+      </div>
+  
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      </ul>
+    </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+</body>
+
+</html>
